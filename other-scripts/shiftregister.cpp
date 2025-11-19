@@ -25,12 +25,11 @@ void setup() {
 void loop() {
   // Example 1: Light up all LEDs one by one
   for (int i = 0; i < 8; i++) {
-    bitSet(leds, i); // Set the i-th bit HIGH
-    updateShiftRegister();
-    delay(500); // Wait before turning on the next LED
-  }
-  for (int i = 0; i < 8; i++) {
-    bitClear(leds, i); // Set the i-th bit HIGH
+    bitSet(leds, i);
+    bitClear(leds, i-1);
+    if (i == 0) {
+      bitClear(leds, 7); // Clear the last LED when the first is lit
+    }
     updateShiftRegister();
     delay(500); // Wait before turning on the next LED
   }
