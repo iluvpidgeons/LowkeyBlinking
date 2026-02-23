@@ -1,22 +1,9 @@
 #include <Arduino.h>
 
-/*
-  This is like my big project, khaby lame died like a few months ago but its still funny
-  still wip
-*/
-
-// motor pins
-const int motor1A = GPIO_NUM_13;
-const int motor2A = GPIO_NUM_14;
-const int enableA = GPIO_NUM_27;
-
-// potentiometer pin
-const int potpin = GPIO_NUM_33;
-
-// led pins
-const int ledPin1 = 16;
-const int ledPin2 = 17;
-const int ledPin3 = 18;
+int motor1A = GPIO_NUM_13;
+int motor2A = GPIO_NUM_14;
+int enableA = GPIO_NUM_27;
+int potpin = GPIO_NUM_33;
 
 // PWM settings
 const int freq = 20000; // PWM frequency: 20 kHz (Adjust 2-20 kHz as needed)
@@ -51,18 +38,11 @@ void setup() {
   pinMode(motor1A, OUTPUT);
   pinMode(motor2A, OUTPUT);
   pinMode(potpin, INPUT);
-  pinMode(ledPin1, OUTPUT);
-  pinMode(ledPin2, OUTPUT);
-  pinMode(ledPin3, OUTPUT);
 
   // Set up PWM
   ledcAttach(enableA, freq, resolution);
   ledcWrite(enableA, 0);  // Start with motor stopped
   analogReadResolution(resolution);
-
-  digitalWrite(ledPin1, LOW);
-  digitalWrite(ledPin2, LOW);
-  digitalWrite(ledPin3, LOW);
 }
 
 
@@ -71,16 +51,7 @@ void loop() {
   int sensorValue;
   sensorValue = analogRead(potpin);
   Serial.println(sensorValue);
-  digitalWrite(ledPin3, LOW);
-  digitalWrite(ledPin1, HIGH);
-  delay(100);
-  
-  digitalWrite(ledPin1, LOW);
-  digitalWrite(ledPin2, HIGH);
-  forward(sensorValue, 1000);
-
-  digitalWrite(ledPin2, LOW);
-  digitalWrite(ledPin3, HIGH);
+  forward(sensorValue, 2000);
   stop(1000);
 }
 

@@ -1,6 +1,10 @@
 #include <Arduino.h>
 #include <Bounce2.h>
 
+/*
+  lowk dont know how most of this works
+*/
+
 const int BUTTON_PIN = GPIO_NUM_22; // button pin
 const int LED_PIN1 = GPIO_NUM_23; // LED pin
 

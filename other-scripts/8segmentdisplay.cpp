@@ -4,7 +4,7 @@ const int latchPin = GPIO_NUM_22;  // Pin connected to the ST_CP pin of the 74HC
 const int clockPin = GPIO_NUM_23;  // Pin connected to the SH_CP pin of the 74HC595
 const int dataPin = GPIO_NUM_21;   // Pin connected to the DS pin of the 74HC595
 
-//Array to store the segment patterns for digits 0-9 and a black (all off)
+// Array to store the segment patterns for digits 0-9 and a black (all off)
 // For a common cathode (+) a '0' (LOW) turns on a segment, a '1' (HIGH) turns it off.
 byte digits[] = {
     // a b c d e f g DP
