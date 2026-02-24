@@ -14,9 +14,9 @@ const int enableA = GPIO_NUM_27;
 const int potpin = GPIO_NUM_33;
 
 // led pins
-const int ledPin1 = 16;
-const int ledPin2 = 17;
-const int ledPin3 = 18;
+const int ledPin1 = GPIO_NUM_16;
+const int ledPin2 = GPIO_NUM_17;
+const int ledPin3 = GPIO_NUM_18;
 
 // PWM settings
 const int freq = 20000; // PWM frequency: 20 kHz (Adjust 2-20 kHz as needed)
