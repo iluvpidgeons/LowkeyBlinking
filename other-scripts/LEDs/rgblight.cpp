@@ -2,7 +2,7 @@
 
 int RED_PIN = GPIO_NUM_16;
 int GREEN_PIN = GPIO_NUM_17;
-int BLUE_PIN = GPIO_NUM_5;
+int BLUE_PIN = GPIO_NUM_18;
 
 void red(int duration) {
   analogWrite(RED_PIN, 0);

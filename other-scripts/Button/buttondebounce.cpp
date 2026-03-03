@@ -5,8 +5,8 @@
   lowk dont know how most of this works
 */
 
-const int BUTTON_PIN = GPIO_NUM_22; // button pin
-const int LED_PIN1 = GPIO_NUM_23; // LED pin
+const int BUTTON_PIN = GPIO_NUM_23; // button pin
+const int LED_PIN1 = GPIO_NUM_18; // LED pin
 
 int lastButtonState = HIGH; // Store button status (HIGH = 1, LOW = 0)
 int ledState = LOW; // Tracks the current state of the LED
