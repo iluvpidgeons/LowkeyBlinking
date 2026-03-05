@@ -6,11 +6,12 @@ int micValue;
 
 void setup() {
   Serial.begin(115200);
+  pinMode(micPin, INPUT);
   analogReadResolution(resolution);
 }
 
 void loop() {
   micValue = analogRead(micPin);
   Serial.println(micValue);
-  delay(100);
+  delay(2);
 }

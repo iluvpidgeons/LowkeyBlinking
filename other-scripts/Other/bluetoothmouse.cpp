@@ -6,19 +6,22 @@
   The bluetooth library doesnt work yet
 */
 
-const int micPin = GPIO_NUM_39;
-const int resolution = 12;
-int micValue;
+const int buttonPin = GPIO_NUM_23;
 
 // BleMouse bleMouse("Diddyblud Mouse", "ESP32", 100);
 
 void setup() {
   Serial.begin(115200);
   // bleMouse.begin();
-  analogReadResolution(resolution);
+  pinMode(buttonPin, INPUT_PULLUP);
 }
 
 void loop() {
-  micValue = analogRead(micPin);
-  Serial.println(micValue);
+  if (digitalRead(buttonPin) == LOW) {
+    // bleMouse.press(MOUSE_LEFT);
+    Serial.println("Pressed");
+  } else {
+    // bleMouse.release(MOUSE_LEFT);
+    Serial.println("Released");
+  }
 }

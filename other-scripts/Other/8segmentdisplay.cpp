@@ -31,7 +31,7 @@ byte letters[] = {
 
 byte blank = B11111111; // All segments off
 
-// Functron to update the shift register with byte patterns.
+// Functon to update the shift register with byte patterns.
 void updateShiftRegister(byte pattern) {
   digitalWrite(latchPin, LOW);                     // Set latchPin LOW to prevent changes while shifting
   shiftOut(dataPin, clockPin, MSBFIRST, pattern);  // Send the byte to the shift register
@@ -40,7 +40,7 @@ void updateShiftRegister(byte pattern) {
 
 void countdown () {
     for (int i = 9; i >= 0; i--) {
-        updateShiftRegister(digits[i]); // Display letter
+        updateShiftRegister(digits[i]); // Display number
         delay(1000); // Wait for 1 second
     }
     for (int i = 0; i <= 4; i++) {

@@ -8,7 +8,6 @@ int enableA = GPIO_NUM_27;
 const int freq = 20000; // PWM frequency: 20 kHz (Adjust 2-20 kHz as needed)
 const int resolution = 8; // PWM resolution: 8 bits (dutyCycle: 0-255)
 
-
 void stop(int rtime) {
   digitalWrite(motor1A, LOW);
   digitalWrite(motor2A, LOW);
@@ -30,8 +29,6 @@ void reverse(int spd, int rtime) {
   delay(rtime);
 }
 
-
-
 void setup() {
   Serial.begin(115200);
   pinMode(motor1A, OUTPUT);
@@ -41,8 +38,6 @@ void setup() {
   ledcAttach(enableA, freq, resolution);
   ledcWrite(enableA, 0);  // Start with motor stopped
 }
-
-
 
 void loop() {
   forward(255, 2000); // Move forward at speed 255 for 2 seconds

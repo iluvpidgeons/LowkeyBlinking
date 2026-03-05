@@ -11,7 +11,6 @@ const int resolution = 8; // 8 bits resolution, values from 0 to 255
 int buttonState;
 int ledState = HIGH;
 
-
 void changestate(int speed) {
     if (ledState == LOW) {
       for (int i = 0; i <= 255; i++) {
@@ -47,8 +46,7 @@ void loop() {
     if  (buttonState == LOW) {
       while (digitalRead(buttonpin) == LOW) {
         // do nothing
+      }
     }
   }
-  }
-
 }

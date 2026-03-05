@@ -4,7 +4,7 @@
   this is one of the first scripts I made so im not gonna edit it but I forgot to add an analogReadResolution
 */
 
-int sensorPin = GPIO_NUM_33; // Analog input pin
+int sensorPin = GPIO_NUM_36; // Analog input pin
 int ledPin1 = GPIO_NUM_16;
 int ledPin2 = GPIO_NUM_17;
 int ledPin3 = GPIO_NUM_18;
