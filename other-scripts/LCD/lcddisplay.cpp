@@ -7,8 +7,7 @@ int lcdRows = 2;
 
 LiquidCrystal_I2C lcd(0x27, lcdColums, lcdRows); // Set the LCD I2C address and dimensions
 
-void setup ()
-{
+void setup () {
     lcd.init();                      // Initialize the LCD
     lcd.backlight();                 // Turn on the LCD backlight.
 }

@@ -14,7 +14,6 @@ const int potPin = GPIO_NUM_36;
 const int freq = 20000; // idk really what to set this to
 const int resolution = 8; // 0-255
 
-
 void stop(int rtime) {
   digitalWrite(positiveA, LOW);
   digitalWrite(negativeA, LOW);

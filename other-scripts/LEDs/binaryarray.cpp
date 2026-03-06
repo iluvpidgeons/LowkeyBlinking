@@ -11,18 +11,17 @@ int datArray[] = {B00000000
   , B00001111
   , B00011111
   , B00111111
-  , B01111111};
+  , B01111111
+};
 
-void setup()
-{
+void setup() {
   //set pins to output
   pinMode(STcp, OUTPUT);
   pinMode(SHcp, OUTPUT);
   pinMode(DS, OUTPUT);
 }
 
-void loop ()
-{
+void loop () {
   for(int num = 0; num <8; num++)
   {
     digitalWrite(STcp, LOW); //ground ST_CP and hold low for as long as you are transmitting
