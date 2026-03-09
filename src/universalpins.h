@@ -5,10 +5,10 @@
 #define ledPin1 16
 #define ledPin2 17
 #define ledPin3 18
-#define potPin 36
 #define buttonPin 23 // currently overlaps with SH_CP shift register pin, ill fix it later
+// #define buzzerPin 14
+#define potPin 36
 #define micPin 39
-//#define buzzerPin 14
 
 // motor driver
 #define motor1A 13
