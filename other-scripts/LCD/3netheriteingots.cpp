@@ -38,33 +38,33 @@ void setup ()
 }
 
 void loop () {
-    lcd.setCursor(0, 0);             // Set cursor to the first colum, first row
+    lcd.setCursor(0, 0);
     lcd.print("THREE");
     delay(750);
-    lcd.clear(); // clears the display to print new message
+    lcd.clear();
     
-    lcd.setCursor(0, 0);             // Set cursor to the first colum, first row
+    lcd.setCursor(0, 0);
     lcd.print("NETHERITE");
     delay(750);
-    lcd.clear(); // clears the display to print new message
+    lcd.clear();
 
-    lcd.setCursor(0, 0);             // Set cursor to the first colum, first row
+    lcd.setCursor(0, 0);
     lcd.print("INGOTS");
     delay(750);
 
-    lcd.setCursor(0, 1);             // Set cursor to the first colum, first row
+    lcd.setCursor(0, 1);
     lcd.write(byte(0));
     lcd.setCursor(1, 1);
     lcd.write(byte(1));
     delay(500);
 
-    lcd.setCursor(2, 1);             // Set cursor to the first colum, first row
+    lcd.setCursor(2, 1);
     lcd.write(byte(0));
     lcd.setCursor(3, 1);
     lcd.write(byte(1));
     delay(500);
 
-    lcd.setCursor(4, 1);             // Set cursor to the first colum, first row
+    lcd.setCursor(4, 1);
     lcd.write(byte(0));
     lcd.setCursor(5, 1);
     lcd.write(byte(1));

@@ -1,5 +1,6 @@
 /* 
     not using this yet cuz I dont feel like editing all the scripts but it should work
+    "rotaryencoder.cpp", shift register, & buzzer scripts are inconsistent with these at the moment
 */
 
 #define ledPin1 16

@@ -28,7 +28,7 @@ void changestate(int speed) {
     digitalWrite(ledPin3, ledState);
     Serial.print("Button Pressed, ");
     Serial.println(ledState);
-} // I am going to make this fade in and out depending on the speed varible
+}
 
 void setup() {
   Serial.begin(115200);
@@ -41,7 +41,7 @@ void setup() {
 void loop() {
   int buttonState = digitalRead(buttonpin);
   if (buttonState == LOW) {
-    changestate(500);
+    changestate(250);
     int buttonState = digitalRead(buttonpin);
     if  (buttonState == LOW) {
       while (digitalRead(buttonpin) == LOW) {

@@ -1,14 +1,12 @@
 #include <Arduino.h>
 
-const int buzzerPin = 18; // the buzzer pin
+const int buzzerPin = GPIO_NUM_18;
 
-void setup()
-{
-  pinMode(buzzerPin, OUTPUT); // Set as output
+void setup() {
+  pinMode(buzzerPin, OUTPUT);
 }
 
-void loop()
-{
+void loop() {
   for (int i = 0; i < 50; i++) // Loop 50 times and play a short tone each time
   {
     digitalWrite(buzzerPin, HIGH); // Set to HIGH to make the buzzer sound

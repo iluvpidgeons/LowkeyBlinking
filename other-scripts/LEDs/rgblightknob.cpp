@@ -2,6 +2,7 @@
 
 /*
   This dont work yet but im tryna make a potentiometer go through the color wheel
+  I DONT KNOW HOW TO DO THIS IDK SHIT ABOUT COLORS
 */
 
 const int ledPinRed = GPIO_NUM_16;

@@ -7,8 +7,7 @@
 */
 
 const int buttonPin = GPIO_NUM_23;
-
-// BleMouse bleMouse("Diddyblud Mouse", "ESP32", 100);
+// BleMouse bleMouse;
 
 void setup() {
   Serial.begin(115200);
@@ -17,11 +16,13 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(buttonPin) == LOW) {
-    // bleMouse.press(MOUSE_LEFT);
-    Serial.println("Pressed");
-  } else {
-    // bleMouse.release(MOUSE_LEFT);
-    Serial.println("Released");
-  }
+  // if (bleMouse.isConnected()) {
+  //   if (digitalRead(buttonPin) == LOW) {
+  //     bleMouse.press(MOUSE_LEFT);
+  //     Serial.println("Pressed");
+  //   } else {
+  //     bleMouse.release(MOUSE_LEFT);
+  //     Serial.println("Released");
+  //   }
+  // }
 }

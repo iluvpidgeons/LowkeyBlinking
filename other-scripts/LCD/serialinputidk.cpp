@@ -26,14 +26,14 @@ void setup() {
 
 void loop() {
     lcd.clear();
-    lcd.setCursor(0, 0);             // Set cursor to the first colum, first row
+    lcd.setCursor(0, 0);
     lcd.print("check serial monitor");
     if (Serial.available() > 0) {
         String input;
-        input = Serial.readString(); // Serial.parseInt() doesnt work because it reads strings
+        input = Serial.readString(); // Serial.parseInt() doesn't work because it reads ints, not Strings
         clearBuffer();
         lcd.clear();
-        lcd.setCursor(0, 0);             // Set cursor to the first colum, first row
+        lcd.setCursor(0, 0);
         lcd.print(input);
     }
 }
