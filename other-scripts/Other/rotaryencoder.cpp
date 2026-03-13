@@ -6,8 +6,8 @@
 
 const int CLK = GPIO_NUM_16;
 const int DT = GPIO_NUM_17;
-const int SW = GPIO_NUM_23;
-const int buzzerPin = GPIO_NUM_18;
+const int SW = GPIO_NUM_18;
+const int buzzerPin = GPIO_NUM_19;
 
 int counter = 0;
 int lastCLKState;
@@ -15,9 +15,10 @@ int currentCLKState;
 
 void setup() {
   Serial.begin(115200);
-  pinMode(CLK, INPUT); // knob movement
-  pinMode(DT, INPUT); // direction
-  pinMode(SW, INPUT_PULLUP); // button
+  // I dont know if these should all be INPUT_PULLUP
+  pinMode(CLK, INPUT_PULLUP); // knob movement
+  pinMode(DT, INPUT_PULLUP); // direction
+  pinMode(SW, INPUT_PULLUP); // button (optional)
   pinMode(buzzerPin, OUTPUT);
 
   lastCLKState = digitalRead(CLK);
@@ -50,6 +51,6 @@ void loop() {
   Serial.print(digitalRead(DT));
   Serial.print(" SW: ");
   Serial.print(digitalRead(SW));
-  Serial.print(",");
+  Serial.print(", ");
   Serial.println(counter);
 }

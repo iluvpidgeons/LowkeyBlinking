@@ -1,8 +1,8 @@
 #include <Arduino.h>
 
-const int STcp = GPIO_NUM_22;//ST_CP
-const int SHcp = GPIO_NUM_23;//SH_CP
-const int DS = GPIO_NUM_21;  //DS
+const int latchPin = GPIO_NUM_22;  // Pin connected to the ST_CP pin of the 74HC595
+const int clockPin = GPIO_NUM_23;  // Pin connected to the SH_CP pin of the 74HC595
+const int dataPin = GPIO_NUM_21;   // Pin connected to the DS pin of the 74HC595
 
 int datArray[] = {B00000000
   , B00000001
@@ -16,17 +16,17 @@ int datArray[] = {B00000000
 
 void setup() {
   //set pins to output
-  pinMode(STcp, OUTPUT);
-  pinMode(SHcp, OUTPUT);
-  pinMode(DS, OUTPUT);
+  pinMode(latchPin, OUTPUT);
+  pinMode(clockPin, OUTPUT);
+  pinMode(dataPin, OUTPUT);
 }
 
 void loop () {
   for(int num = 0; num <8; num++)
   {
-    digitalWrite(STcp, LOW); //ground ST_CP and hold low for as long as you are transmitting
-    shiftOut(DS, SHcp, MSBFIRST, datArray[num]);
-    digitalWrite(STcp, HIGH); //pull the ST_CPST_CP to save the data
+    digitalWrite(latchPin, LOW); // ground ST_CP and hold low for as long as you are transmitting
+    shiftOut(dataPin, clockPin, MSBFIRST, datArray[num]);
+    digitalWrite(latchPin, HIGH); //pull the ST_CP to save the data
     delay(1000);
   }
 }

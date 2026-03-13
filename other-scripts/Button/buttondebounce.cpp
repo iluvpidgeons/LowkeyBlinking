@@ -5,8 +5,8 @@
   lowk dont know how most of this works
 */
 
-const int BUTTON_PIN = GPIO_NUM_23; // button pin
-const int LED_PIN1 = GPIO_NUM_18; // LED pin
+const int buttonPin = GPIO_NUM_4; // button pin
+const int ledPin3 = GPIO_NUM_18; // LED pin
 
 int lastButtonState = HIGH; // Store button status (HIGH = 1, LOW = 0)
 int ledState = LOW; // Tracks the current state of the LED
@@ -14,13 +14,13 @@ int ledState = LOW; // Tracks the current state of the LED
 Bounce2::Button button = Bounce2::Button();
 
 void momentaryLight() {
-  int buttonState = digitalRead(BUTTON_PIN);
+  int buttonState = digitalRead(buttonPin);
 
   if (buttonState == LOW) {
-    digitalWrite(LED_PIN1, HIGH); // turn LED on when button pressed
+    digitalWrite(ledPin3, HIGH); // turn LED on when button pressed
   }
   else {
-    digitalWrite(LED_PIN1, LOW); // turn LED off when button not pressed
+    digitalWrite(ledPin3, LOW); // turn LED off when button not pressed
   }
 }
 
@@ -31,11 +31,11 @@ void changestate() {
     else {
       ledState = LOW;
     }
-    digitalWrite(LED_PIN1, ledState);
+    digitalWrite(ledPin3, ledState);
 }
 
 void lightSwitch() {  
-  int buttonState = digitalRead(BUTTON_PIN);
+  int buttonState = digitalRead(buttonPin);
 
     if (buttonState != lastButtonState) {
         lastButtonState = buttonState;
@@ -53,8 +53,8 @@ void lightSwitchDebounced() {
 }
 
 void setup() {
-  pinMode(LED_PIN1, OUTPUT);
-  button.attach(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(ledPin3, OUTPUT);
+  button.attach(buttonPin, INPUT_PULLUP);
   button.interval(25); // set debounce interval to 25 milliseconds
 }
 

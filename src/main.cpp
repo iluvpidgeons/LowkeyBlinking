@@ -1,20 +1,21 @@
 #include <Arduino.h>
 
-const int buzzerPin = 18; // the buzzer pin
+const int buttonPin = GPIO_NUM_4;
+const int ledPin3 = GPIO_NUM_18;
 
-void setup()
-{
-  pinMode(buzzerPin, OUTPUT); // Set as output
+void setup() {
+  Serial.begin(115200);
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(ledPin3, OUTPUT);
 }
 
-void loop()
-{
-  for (int i = 0; i < 50; i++) // Loop 50 times and play a short tone each time
-  {
-    digitalWrite(buzzerPin, HIGH); // Set to HIGH to make the buzzer sound
-    delay(3); // Wait for 3 milliseconds
-    digitalWrite(buzzerPin, LOW); // LOW to turn off the buzzer
-    delay(3); // 
+void loop() {
+  int buttonState = digitalRead(buttonPin);
+  if (buttonState == LOW) {
+    digitalWrite(ledPin3, HIGH);
+    Serial.println("Button Pressed");
+  } else {
+    digitalWrite(ledPin3, LOW);
+    Serial.println("Button Released");
   }
-  delay(1000); // Wait for 1s before starting the next loop
 }

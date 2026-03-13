@@ -6,3 +6,9 @@ also the project name was lowkeyblinking because whenever it was started we were
 
 ---
 Ill add a list of the correct components when I find those out lol
+
+---
+bluetooth scripts don't work yet because when I include the libraries it fails to compile and I don't know why
+
+---
+HOW DO I FIX INTELLISENSE AND GITHUB COPILOT ON VSCODE

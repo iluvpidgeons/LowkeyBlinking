@@ -1,34 +1,34 @@
 #include <Arduino.h>
 
-const int RED_PIN = GPIO_NUM_16;
-const int GREEN_PIN = GPIO_NUM_17;
-const int BLUE_PIN = GPIO_NUM_18;
+const int ledRedPin = GPIO_NUM_16;
+const int ledGreenPin = GPIO_NUM_17;
+const int ledBluePin = GPIO_NUM_18;
 
 void red(int duration) {
-  analogWrite(RED_PIN, 0);
-  analogWrite(GREEN_PIN, 255);
-  analogWrite(BLUE_PIN, 255);
+  analogWrite(ledRedPin, 0);
+  analogWrite(ledGreenPin, 255);
+  analogWrite(ledBluePin, 255);
   delay(duration);
 }
 
 void green(int duration) {
-  analogWrite(RED_PIN, 255);
-  analogWrite(GREEN_PIN, 0);
-  analogWrite(BLUE_PIN, 255);
+  analogWrite(ledRedPin, 255);
+  analogWrite(ledGreenPin, 0);
+  analogWrite(ledBluePin, 255);
   delay(duration);
 }
 
 void blue(int duration) {
-  analogWrite(RED_PIN, 255);
-  analogWrite(GREEN_PIN, 255);
-  analogWrite(BLUE_PIN, 0);
+  analogWrite(ledRedPin, 255);
+  analogWrite(ledGreenPin, 255);
+  analogWrite(ledBluePin, 0);
   delay(duration);
 }
 
 void setup() {
-  pinMode(RED_PIN, OUTPUT);
-  pinMode(GREEN_PIN, OUTPUT);
-  pinMode(BLUE_PIN, OUTPUT);
+  pinMode(ledRedPin, OUTPUT);
+  pinMode(ledGreenPin, OUTPUT);
+  pinMode(ledBluePin, OUTPUT);
 }
 
 void loop() {

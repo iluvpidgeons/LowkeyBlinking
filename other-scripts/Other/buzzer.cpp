@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-const int buzzerPin = GPIO_NUM_18;
+const int buzzerPin = GPIO_NUM_19;
 
 void setup() {
   pinMode(buzzerPin, OUTPUT);
