@@ -1,17 +1,17 @@
 #include <Arduino.h>
 
-const int latchPin = GPIO_NUM_22;  // Pin connected to the ST_CP pin of the 74HC595
-const int clockPin = GPIO_NUM_23;  // Pin connected to the SH_CP pin of the 74HC595
-const int dataPin = GPIO_NUM_21;   // Pin connected to the DS pin of the 74HC595
+const int latchPin = GPIO_NUM_22; // Pin connected to the ST_CP pin of the 74HC595
+const int clockPin = GPIO_NUM_23; // Pin connected to the SH_CP pin of the 74HC595
+const int dataPin = GPIO_NUM_21; // Pin connected to the DS pin of the 74HC595
 
-//Variable to hold the state of the LEDs (8 bits for 8 LEDs)
+// Variable to hold the state of the LEDs (8 bits for 8 LEDs)
 byte leds = 0;
 
 // Function to update the shift register with the current state of the leds byte
 void updateShiftRegister() {
-  digitalWrite(latchPin, LOW);          // Set latchPin LOW to prevent changes while shifting
+  digitalWrite(latchPin, LOW); // Set latchPin LOW to prevent changes while shifting
   shiftOut(dataPin, clockPin, MSBFIRST, leds); // Send the byte to the shift register
-  digitalWrite(latchPin, HIGH);         // Set latchPin high to update the outputs
+  digitalWrite(latchPin, HIGH); // Set latchPin high to update the outputs
 }
 
 void setup() {
@@ -35,4 +35,4 @@ void loop() {
   }
 }
 
-//bitClear() turns the leds off
+// bitClear() turns the leds off

@@ -5,10 +5,10 @@ also the project name was lowkeyblinking because whenever it was started we were
 `khabylame.cpp` moved to its own github project iluvpidgeons/KhabyLameMechanism
 
 ---
-Ill add a list of the correct components when I find those out lol
+I'll add a list of the correct components when I find those out lol
 
 ---
-bluetooth scripts don't work yet because when I include the libraries it fails to compile and I don't know why
+bluetooth completely doesn't work rn lmao and NodeMCU-32S doesn't support USB keyboard emulation or whatever
 
 ---
-HOW DO I FIX INTELLISENSE AND GITHUB COPILOT ON VSCODE
+ok so rn intellisense and github copilot are broken and I can't upload to the esp

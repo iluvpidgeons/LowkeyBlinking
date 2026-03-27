@@ -1,8 +1,10 @@
+#pragma once // not completely sure what this means
+
 /* 
-    not using this yet cuz I dont feel like editing all the scripts but it should work
-    the following scripts are NOT consistent with this list
-        *rotaryencoder.cpp
-        *rgblightknob3.cpp
+  not using this yet cuz I don't feel like editing all the scripts but it should work
+  the following scripts are NOT consistent with this list
+    rgblightknob3.cpp
+    mediacontrol.cpp
 */
 
 // output pins
@@ -28,3 +30,8 @@
 #define latchPin 22
 #define clockPin 23
 #define dataPin 21
+
+// rotary encoder
+#define SW 2
+#define DT 0
+#define CLK 4

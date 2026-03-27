@@ -3,7 +3,7 @@
 #include <LiquidCrystal_I2C.h>
 
 /*
-    Not finished yet
+    not finished yet
 */
 
 int lcdColums = 16;
@@ -21,13 +21,13 @@ void setup() {
     Serial.begin(115200);
     delay(1000);
     Serial.println("Type what u want displayed on the LCD: ");
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("check serial monitor");
     clearBuffer();
 }
 
 void loop() {
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("check serial monitor");
     if (Serial.available() > 0) {
         String input;
         input = Serial.readString(); // Serial.parseInt() doesn't work because it reads ints, not Strings

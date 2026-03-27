@@ -12,8 +12,7 @@ void setup() {
 }
 
 void loop() {
-    
-if (Serial.available() > 0) {
+    if (Serial.available() > 0) {
         String letterGrade;
         int grade = Serial.parseInt();
         clearBuffer();

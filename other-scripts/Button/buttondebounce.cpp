@@ -25,24 +25,23 @@ void momentaryLight() {
 }
 
 void changestate() {
-    if (ledState == LOW) {
-      ledState = HIGH;
-    }
-    else {
-      ledState = LOW;
-    }
-    digitalWrite(ledPin3, ledState);
+  if (ledState == LOW) {
+    ledState = HIGH;
+  } else {
+    ledState = LOW;
+  }
+  digitalWrite(ledPin3, ledState);
 }
 
 void lightSwitch() {  
-  int buttonState = digitalRead(buttonPin);
+int buttonState = digitalRead(buttonPin);
 
-    if (buttonState != lastButtonState) {
-        lastButtonState = buttonState;
-        if (buttonState == HIGH) {
-        changestate();
-        }
+  if (buttonState != lastButtonState) {
+    lastButtonState = buttonState;
+    if (buttonState == HIGH) {
+      changestate();
     }
+  }
 }
 
 void lightSwitchDebounced() {

@@ -20,18 +20,18 @@ LiquidCrystal_I2C lcd(0x27, lcdColums, lcdRows); // Set the LCD I2C address and 
 
 void setup ()
 {
-    lcd.init();                      // Initialize the LCD
-    lcd.backlight();                 // Turn on the LCD backlight.
-    lcd.createChar(0, heart);
+  lcd.init();                      // Initialize the LCD
+  lcd.backlight();                 // Turn on the LCD backlight.
+  lcd.createChar(0, heart);
 }
 
 void loop () {
-    lcd.setCursor(0, 0);             // Set cursor to the first colum, first row
-    lcd.write(byte(0));
-    delay(1000);
-    lcd.clear(); // clears the display to print new message
-    lcd.setCursor(0, 1);             // Set the cursor to first colum, second row
-    lcd.write(byte(0));
-    delay(1000);
-    lcd.clear();
+  lcd.setCursor(0, 0);             // Set cursor to the first colum, first row
+  lcd.write(byte(0));
+  delay(1000);
+  lcd.clear(); // clears the display to print new message
+  lcd.setCursor(0, 1);             // Set the cursor to first colum, second row
+  lcd.write(byte(0));
+  delay(1000);
+  lcd.clear();
 }
