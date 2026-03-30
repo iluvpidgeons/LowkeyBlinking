@@ -49,7 +49,7 @@ void setup() {
   greetUser();
   sayHello("Noah");
   describePet("Cat", "Felix");
-  //  describePet("Ralph", "Cat"); // Incorrect example
+  // describePet("Ralph", "Cat"); // Incorrect example
   describePC("Dell", "XPS 15", 16, 512, "Intel Core i7");
   
   String formattedName = getFormattedName("Noah", "?");

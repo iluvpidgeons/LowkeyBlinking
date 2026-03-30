@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 /*
-    I didn't write most of this  so I dont really know how it works but like I know most of it
+    I didn't write most of this so I dont really know how it works but like I know most of it
 */
 
 int userAge;

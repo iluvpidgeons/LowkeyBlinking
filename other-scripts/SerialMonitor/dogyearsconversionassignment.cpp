@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 /*
-    This is basically just serialmonitorinput.cpp but simpiler and converts dog years to human years with serial monitor
+    this is basically just serialmonitorinputexample.cpp but simpiler and converts dog years to human years with serial monitor
 */
 
 int dogAge;

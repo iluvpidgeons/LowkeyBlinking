@@ -6,7 +6,10 @@ const int dataPin = GPIO_NUM_21;
 const int ledPin3 = GPIO_NUM_18;
 const int buzzerPin = GPIO_NUM_19;
 
-// I haven't tested this yet so idk if it gonna work
+/*
+  not finished yet
+  im gonna add some explosion thing at some point
+*/
 
 byte digits[] = {
   // a b c d e f g DP

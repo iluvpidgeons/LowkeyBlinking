@@ -4,6 +4,7 @@
   not using this yet cuz I don't feel like editing all the scripts but it should work
   the following scripts are NOT consistent with this list
     rgblightknob3.cpp
+    rotaryencoder.cpp
     mediacontrol.cpp
 */
 
@@ -31,7 +32,9 @@
 #define clockPin 23
 #define dataPin 21
 
-// rotary encoder
-#define SW 2
-#define DT 0
-#define CLK 4
+// rotary encoder (these pins cause the esp32 to not upload I think)
+/*
+  #define SW 2
+  #define DT 0
+  #define CLK 4
+*/

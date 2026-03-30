@@ -1,6 +1,8 @@
 #include <Arduino.h>
 
-// not finished
+/*
+  not finished
+*/
 
 void setup () {
   Serial.begin(115200);

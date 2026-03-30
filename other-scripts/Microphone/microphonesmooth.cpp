@@ -4,7 +4,7 @@
   chatgpt wrote most of this I aint that smart
 */
 
-const int micPin = GPIO_NUM_34;
+const int micPin = GPIO_NUM_39;
 // const int ledPin1 = GPIO_NUM_16;
 // const int ledPin2 = GPIO_NUM_17;
 // const int ledPin3 = GPIO_NUM_18;
