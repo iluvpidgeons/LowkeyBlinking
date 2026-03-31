@@ -16,7 +16,7 @@ const byte digits[] = {
   0b01000001, // 6
   0b00011111, // 7
   0b00000001, // 8
-  0b00001001  // 9
+  0b00011001  // 9
 };
 
 void updateShiftRegister(byte pattern) {

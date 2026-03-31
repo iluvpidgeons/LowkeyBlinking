@@ -1,15 +1,15 @@
 #include <Arduino.h>
 
+/*
+  not finished yet
+  im gonna add some explosion thing at some point
+*/
+
 const int latchPin = GPIO_NUM_22;
 const int clockPin = GPIO_NUM_23;
 const int dataPin = GPIO_NUM_21;
 const int ledPin3 = GPIO_NUM_18;
 const int buzzerPin = GPIO_NUM_19;
-
-/*
-  not finished yet
-  im gonna add some explosion thing at some point
-*/
 
 byte digits[] = {
   // a b c d e f g DP
@@ -37,6 +37,8 @@ void setup() {
   pinMode(latchPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
   pinMode(dataPin, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(buzzerPin, OUTPUT);
   
   updateShiftRegister(blank);
   digitalWrite(ledPin3, LOW);

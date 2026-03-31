@@ -11,4 +11,4 @@ I'll add a list of the correct components when I find those out lol
 bluetooth completely doesn't work rn lmao and NodeMCU-32S doesn't support USB keyboard emulation or whatever
 
 ---
-ok so rn intellisense and github copilot are broken and I can't upload to the esp
+shift register just lowkey does not work rn so I can't test the bomb script

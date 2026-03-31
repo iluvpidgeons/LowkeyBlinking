@@ -4,9 +4,9 @@
   not finished yet
 */
 
-const int SW = GPIO_NUM_2;
-const int DT = GPIO_NUM_0;
-const int CLK = GPIO_NUM_4;
+const int SW = GPIO_NUM_16;
+const int DT = GPIO_NUM_17;
+const int CLK = GPIO_NUM_18;
 const int buzzerPin = GPIO_NUM_19;
 
 int counter = 0;
@@ -39,6 +39,7 @@ void loop() {
 
   lastCLKState = currentCLKState;
 
+  // ill rewrite this later
   if ((digitalRead(CLK) == 0) || (digitalRead(SW) == 0)) {
     digitalWrite(buzzerPin, HIGH);
   } else {

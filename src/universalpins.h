@@ -31,10 +31,3 @@
 #define latchPin 22
 #define clockPin 23
 #define dataPin 21
-
-// rotary encoder (these pins cause the esp32 to not upload I think)
-/*
-  #define SW 2
-  #define DT 0
-  #define CLK 4
-*/
