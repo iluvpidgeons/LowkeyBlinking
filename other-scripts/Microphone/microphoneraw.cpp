@@ -1,5 +1,10 @@
 #include <Arduino.h>
 
+/*
+  when silent it usally sits around 1600
+  when loud instead of reading 4095 it reads 0
+*/
+
 const int micPin = GPIO_NUM_39;
 const int resolution = 12;
 int micValue;
@@ -11,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-  micValue = analogRead(micPin); // whenever maxed out, instead of reading 4095 it reads 0 and this script adjusts that
+  micValue = analogRead(micPin);
   if (micValue == 0) {
     Serial.println("4095");
   } else {

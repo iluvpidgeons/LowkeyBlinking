@@ -18,7 +18,7 @@
 #define buzzerPin 19
 
 // input pins
-#define buttonPin 4
+#define buttonPin 32 // I would use 34 which is an input only pin but it doesn't work with INPUT_PULLUP
 #define potPin 36
 #define micPin 39
 

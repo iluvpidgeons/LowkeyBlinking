@@ -46,8 +46,8 @@ void loop() {
   int sensorValue;
   sensorValue = analogRead(potPin);
   Serial.println(sensorValue);
-  forward(sensorValue, 2000);
-  stop(1000);
+  forward(sensorValue, 500);
+  // stop(1000);
 }
 
 // activate didy virus :skull: :grape: :mango:
